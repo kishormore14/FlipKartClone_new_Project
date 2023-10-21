@@ -1,0 +1,7 @@
+.cart_product{
+   
+    display: flex;
+}
+.cart_product img{
+    width: 5rem;
+}

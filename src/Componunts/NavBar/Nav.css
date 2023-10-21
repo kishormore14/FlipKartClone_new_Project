@@ -1,0 +1,95 @@
+.search_Inpute{
+    width: 60%;
+}
+.Nav_continer{
+    padding: 0 4rem 0 4rem;
+}
+.nav-item{
+    margin: 0rem 1rem
+}
+.modal-dialog-scrollable .modal-content {
+  
+    overflow: hidden;
+    height: 70vh !important;
+}
+.Looks{
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+}
+.Sign_up{
+    font-size: 1rem;
+    color: #dbdbdb;
+}
+.Login_img{
+    position: absolute;
+    bottom: 1rem;
+}
+.Logine_left{
+    padding-top: 2rem;
+    background-color: #2874f0;
+height: 32.1rem;
+}
+
+.Form_Inpute{
+    border: none;
+    border-bottom: 1px solid black;
+    width: 100%;
+    margin-top: 1rem;
+
+}
+
+
+@media (min-width: 576px){
+.modal-dialog {
+    max-width: 595px !important;
+    margin: 1.75rem auto;
+    
+}
+
+}
+@media (max-width: 776px){
+.Logine_left{
+    display: none;
+}
+.modal-dialog,.modal-body {
+        background-color: #97b9ef;
+
+}
+}
+
+.product_container{
+  list-style: none;
+    padding: 0px;
+    position: absolute;
+    width: 40%;
+    max-height: 151px;
+    overflow: auto;
+    background-color: rgb(89, 142, 229);
+    margin-top: 3rem;
+    z-index: 5;
+}
+.product_container::-webkit-scrollbar {
+  display: none;
+}
+
+.list_products{
+    padding: 1rem 2rem 1rem 2rem;
+
+}
+.list_products:hover{
+    cursor: pointer;
+}
+.list_products img{
+    margin-right: 10px;
+}
+.cursor-pointer_Myorder :hover{
+    cursor: pointer !important;
+}
+.alert-success {
+    color: #0f5132;
+    background-color: #78c4a1 !important;
+    position: relative !important;
+    z-index: 45 !important;
+    border-color: #badbcc;
+}

@@ -1,0 +1,19 @@
+.card{
+    width: 15rem;
+    margin-left: 2rem;
+}
+.product_continer{
+    display: flex;
+    overflow: auto;
+    padding: 1rem
+}
+.card-img-top{
+    height: 9rem
+}
+.button_continer{
+    display: flex;
+    justify-content: space-between;
+}
+.product_continer::-webkit-scrollbar {
+  display: none;
+}
