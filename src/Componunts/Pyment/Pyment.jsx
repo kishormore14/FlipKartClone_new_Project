@@ -137,7 +137,7 @@ const Pyment = () => {
               <div className="row">
                 <div className="row">
                   <div className="col-5">
-                    <button className="btn" onClick={toggleStep}>By Card</button>
+                    <button  onClick={toggleStep}>By Card</button>
                     <h3>Billing Address</h3>
                     <label htmlFor="fname">
                       <i className="fa fa-user" /> Full Name

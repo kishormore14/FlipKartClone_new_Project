@@ -8,6 +8,7 @@ import BastSeller from './Componunts/BastSeller/BastSeller';
 import SearchIteam from './Componunts/SearchIteam/SearchIteam';
 import Pyment from './Componunts/Pyment/Pyment';
 import Myorders from './Componunts/Myorders/Myorders';
+import NavBar2 from './Componunts/NavBar_2/NavBar2';
 
 
 
@@ -15,22 +16,23 @@ function App() {
   return (
     <div className="App">
 
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <Routes>
           <Route path='*' element={<Home to='/' />} />
 
           <Route path='/' element={<Home/>}/>
           <Route path='/cart' element={<Mycart/>}/>
           <Route path='/Myorders' element={<Myorders />} />
-          {/* <Route path='/BastSeller' element={<BastSeller />} /> */}
+        
           <Route path='/SearchIteam' element={<SearchIteam />} />
           <Route path='/Payment' element={<Pyment />} />
 
         </Routes>
 
 
-      </BrowserRouter>
-      
+      </BrowserRouter> */}
+      {/* <Route path='/BastSeller' element={<BastSeller />} /> */}
+      <NavBar2/>
     </div>
   );
 }

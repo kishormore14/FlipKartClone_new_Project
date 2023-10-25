@@ -205,6 +205,7 @@ const Nav = () => {
             <Link className="navbar-brand" to="/">
               <img src={Logo} alt="Logo" />
             </Link>
+           
 
             <form className="d-flex" style={{ width: "50%" }}>
               <input
@@ -263,12 +264,19 @@ const Nav = () => {
 
                   {LogedUser[0] ? (
                     <span
+                      className="onhover"
                       onClick={() => {
                         dispatch(SetUser(null));
                         navigate("/");
                       }}
                     >
-                      Sign out
+                      {LogedUser[0].User_Name}
+                      <div className="droupdown">
+                        <ul>
+                          <li>Wishlist(0)</li>
+                          <li>Sign out</li>
+                        </ul>
+                      </div>
                     </span>
                   ) : (
                     <button

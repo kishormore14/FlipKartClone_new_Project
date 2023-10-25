@@ -39,6 +39,21 @@ height: 32.1rem;
 
 }
 
+.droupdown{
+  list-style: none;
+    width: 9rem;
+    display: none;
+    position: absolute;
+    margin-top: 1rem;
+    background-color: white;
+}
+.onhover:hover{
+cursor: pointer;
+}
+.onhover:hover .droupdown{
+    display:  block !important;
+
+}
 
 @media (min-width: 576px){
 .modal-dialog {

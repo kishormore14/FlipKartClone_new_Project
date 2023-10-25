@@ -1,0 +1,9 @@
+.SecondNavUL{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+.SecondNavUL li img{
+    height: 65px;
+    width: 65px;
+}
