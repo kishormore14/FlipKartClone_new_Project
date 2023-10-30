@@ -107,8 +107,18 @@ const show=()=>{
       ))}
 
       <div className="d-flex f-rightd-flex justify-content-center">
-        <p>Total Cart Price: {totalCartPrice} ₹</p> <button onClick={show}>Buy Now</button>
-        
+        <p>Total Cart Price: {totalCartPrice} ₹</p>{" "}
+        <button
+          onClick={show}
+          style={{
+            backgroundColor: "#fb641b",
+            color: "#fff",
+            fontSize: "1em",
+            margin: "5px",
+          }}
+        >
+          Buy Now
+        </button>
       </div>
     </div>
   );

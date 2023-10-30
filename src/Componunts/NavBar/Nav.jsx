@@ -44,6 +44,8 @@ const Nav = () => {
   const dispatch = useDispatch();
 
   let Cartproduct = useSelector((state) => state.allProducts.Products.length);
+    let WishList = useSelector((state) => state.allProducts.Wishlist.length);
+
   let LogedUser = useSelector((state) => state.allProducts.User);
 
   const [Logine_register, setLogine_register] = useState(true);
@@ -154,7 +156,15 @@ const Nav = () => {
       : false
   );
 
+ const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
+ const toggleDropdown = () => {
+   setIsDropdownOpen(!isDropdownOpen);
+ };
+
+ const closeDropdown = () => {
+   setIsDropdownOpen(false);
+ };
  const gotoserch = (prod) => {
   dispatch(SearchProduct(prod));
    navigate("/SearchIteam");
@@ -205,7 +215,6 @@ const Nav = () => {
             <Link className="navbar-brand" to="/">
               <img src={Logo} alt="Logo" />
             </Link>
-           
 
             <form className="d-flex" style={{ width: "50%" }}>
               <input
@@ -263,20 +272,53 @@ const Nav = () => {
                   <FontAwesomeIcon icon={faUser} />
 
                   {LogedUser[0] ? (
+                    // <span
+                    //   className="onhover"
+                    //   onClick={() => {
+                    //     dispatch(SetUser(null));
+                    //     navigate("/");
+                    //   }}
+                    // >
+                    //   {LogedUser[0].User_Name}
+                    //   <div className="droupdown">
+                    //     <ul>
+                    //       <li>Wishlist(0)</li>
+                    //       <li>Sign out</li>
+                    //     </ul>
+                    //   </div>
+                    // </span>
                     <span
                       className="onhover"
-                      onClick={() => {
-                        dispatch(SetUser(null));
-                        navigate("/");
-                      }}
+                      onMouseEnter={toggleDropdown}
+                      onMouseLeave={closeDropdown}
                     >
                       {LogedUser[0].User_Name}
-                      <div className="droupdown">
-                        <ul>
-                          <li>Wishlist(0)</li>
-                          <li>Sign out</li>
-                        </ul>
-                      </div>
+                      {isDropdownOpen && (
+                        <div className="dropdown">
+                          <ul>
+                            <li>
+                            
+                              <Link
+                                to="WishList"
+                                style={{
+                                  color: "black",
+                                  textDecoration: "none",
+                                }}
+                              >
+                                Wishlist({WishList})
+                              </Link>
+                            </li>
+                            <li
+                              onClick={() => {
+                                dispatch(SetUser(null));
+                                navigate("/");
+                              }}
+                            >
+                              Sign out
+                            </li>
+                          </ul>
+                        </div>
+                      )}
                     </span>
                   ) : (
                     <button
@@ -359,7 +401,17 @@ const Nav = () => {
                         <div style={{ textAlign: "center", marginTop: "1rem" }}>
                           <button onClick={postLogine}>Login</button>
                           <br />
-                          <span onClick={toggle}>Create Account</span>
+                          <button
+                            onClick={toggle}
+                            style={{
+                              color: "#2874f0",
+                              fontWeight: "500",
+                              backgroundColor: "transparent",
+                              border: "none",
+                            }}
+                          >
+                            Create Account
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -442,7 +494,17 @@ const Nav = () => {
                         <div style={{ textAlign: "center", marginTop: "1rem" }}>
                           <button onClick={postRegister}>Submit</button>
                           <br />
-                          <span onClick={toggle}>Login</span>
+                          <button
+                            style={{
+                              color: "#2874f0",
+                              fontWeight: "500",
+                              backgroundColor: "transparent",
+                              border: "none",
+                            }}
+                            onClick={toggle}
+                          >
+                            Login
+                          </button>
                         </div>
                       </div>
                     </div>

@@ -31,3 +31,10 @@ export const SearchProduct = (product) => {
         payload: product,
     }
 }
+
+export const Wishlist_PRODUCT = (product) => {
+    return {
+        type: ActionsTypes.Wishlist_PRODUCT,
+        payload: product,
+    }
+}

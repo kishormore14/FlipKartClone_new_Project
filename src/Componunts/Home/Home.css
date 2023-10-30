@@ -7,6 +7,15 @@
     overflow: auto;
     padding: 1rem
 }
+
+.carousel .slider-wrapper {
+    overflow: hidden;
+    margin-top: 83px !important;
+    width: 100%;
+    transition: height .15s ease-in;
+}
+
+
 .card-img-top{
     height: 9rem
 }
@@ -16,4 +25,25 @@
 }
 .product_continer::-webkit-scrollbar {
   display: none;
+}
+svg{
+    position: absolute;
+    width: 25px;
+    right: 9px;
+    top: -1rem;
+}
+
+
+
+svg {
+  transition: transform 0.3s; /* Add a smooth transition effect */
+}
+
+svg:hover {
+     cursor: pointer;
+  transform: scale(1.2); /* Scale the SVG up on hover */
+  transform-origin: center center; /* Set the transform origin to the center for a centered zoom effect */
+}
+.btn-primary {
+    border: 1px solid black !important;
 }

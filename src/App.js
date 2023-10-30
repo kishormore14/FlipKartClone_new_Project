@@ -9,18 +9,22 @@ import SearchIteam from './Componunts/SearchIteam/SearchIteam';
 import Pyment from './Componunts/Pyment/Pyment';
 import Myorders from './Componunts/Myorders/Myorders';
 import NavBar2 from './Componunts/NavBar_2/NavBar2';
-
+import Search from './Componunts/Searhproduct/Search';
+import WishList from './Componunts/WishList/WishList';
 
 
 function App() {
   return (
     <div className="App">
 
-      {/* <BrowserRouter>
+      <BrowserRouter>
         <Routes>
           <Route path='*' element={<Home to='/' />} />
+          
 
           <Route path='/' element={<Home/>}/>
+          <Route path='/WishList' element={<WishList />} />
+
           <Route path='/cart' element={<Mycart/>}/>
           <Route path='/Myorders' element={<Myorders />} />
         
@@ -30,9 +34,9 @@ function App() {
         </Routes>
 
 
-      </BrowserRouter> */}
-      {/* <Route path='/BastSeller' element={<BastSeller />} /> */}
-      <NavBar2/>
+      </BrowserRouter>
+      {/* <Route path='/BastSeller' element={<BastSeller />} />
+      <NavBar2/> */}
     </div>
   );
 }

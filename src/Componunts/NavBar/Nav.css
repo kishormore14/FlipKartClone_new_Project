@@ -77,10 +77,10 @@ cursor: pointer;
   list-style: none;
     padding: 0px;
     position: absolute;
-    width: 40%;
+    width: 60%;
     max-height: 151px;
     overflow: auto;
-    background-color: rgb(89, 142, 229);
+    background-color: rgb(237, 240, 245);
     margin-top: 3rem;
     z-index: 5;
 }
@@ -107,4 +107,45 @@ cursor: pointer;
     position: relative !important;
     z-index: 45 !important;
     border-color: #badbcc;
+}
+.onhover {
+  position: relative;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.onhover:hover .dropdown {
+  display: block;
+  position: absolute;
+
+  z-index: 45;
+}
+
+/* Style the dropdown list items */
+.dropdown ul {
+  list-style: none;
+  padding: 0;
+}
+
+.dropdown li {
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.dropdown li:hover {
+  background-color: #f0f0f0;
+}
+
+.Nav_container{
+    background-color: rgb(40, 116, 240);
+    width: 100%;
+    z-index: 4;
+    position: fixed;
 }

@@ -6,7 +6,8 @@ const initialState = {
 
     ],
     User: [],
-    Search:[]
+    Search:[],
+    Wishlist:[],
     
 };
 
@@ -48,6 +49,27 @@ export const productRenderer = (state = initialState, { type, payload }) => {
             };
             break;
 
+      
+        case ActionsTypes.Wishlist_PRODUCT:
+            const itemId = payload.id; // Assuming you have an 'id' field in your payload
+            const itemIndex = state.Wishlist.findIndex(item => item.id === itemId);
+
+            if (itemIndex !== -1) {
+                return {
+                    ...state,
+                    Wishlist: [
+                        ...state.Wishlist.slice(0, itemIndex),
+                        ...state.Wishlist.slice(itemIndex + 1)
+                    ]
+                };
+            } else {
+                return {
+                    ...state,
+                    Wishlist: [...state.Wishlist, payload]
+                };
+            }
+
+            break;
 
         default:
             return state;

@@ -49,17 +49,16 @@ const dispatch = useDispatch();
         </div>
       </div>
       <button
-        style={{ margin: "5px" }}
+        style={{ backgroundColor: "#fb641b", color: "#fff", fontSize: "1em" ,margin:'5px'}}
         onClick={() => {
           BuyNow(product);
         }}
         className="btn-primary"
-        
       >
         Buy Now
       </button>
       <button
-        style={{ margin: "5px" }}
+        style={{ backgroundColor: "#ff9f00", color: "#fff", fontSize: "1em" }}
         className="btn-primary"
         onClick={() => {
           dispatch(setProduct(product));
@@ -72,3 +71,5 @@ const dispatch = useDispatch();
 }
 
 export default SearchIteam
+
+
