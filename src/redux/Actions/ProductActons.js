@@ -23,7 +23,7 @@ export const SetUser= (user) => {
         type: ActionsTypes.SET_USER,
         payload:user,
     }
-}
+}   
 
 export const SearchProduct = (product) => {
     return {

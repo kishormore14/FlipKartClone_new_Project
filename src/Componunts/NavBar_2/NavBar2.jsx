@@ -1,7 +1,11 @@
-import React from 'react'
+import React from "react";
 import "./NavBar2.css";
 import TopOffers from "./Images/Top Offers.webp";
-
+import Tv from "./Images/TV.webp";
+import Mobile from "./Images/Mobile.webp";
+import Fashion from "./Images/Fashion.webp";
+import Furniture from "./Images/Furniture.webp";
+import Home_Kitchen from "./Images/Furniture.webp";
 
 const NavBar2 = () => {
   return (
@@ -11,26 +15,23 @@ const NavBar2 = () => {
           <img src={TopOffers} alt="" />
         </li>
         <li>
-          <img src={TopOffers} alt="" />
+          <img src={Tv} alt="" />
         </li>
         <li>
-          <img src={TopOffers} alt="" />
+          <img src={Mobile} alt="" />
         </li>
         <li>
-          <img src={TopOffers} alt="" />
+          <img src={Fashion} alt="" />
         </li>
         <li>
-          <img src={TopOffers} alt="" />
+          <img src={Furniture} alt="" />
         </li>
         <li>
-          <img src={TopOffers} alt="" />
-        </li>
-        <li>
-          <img src={TopOffers} alt="" />
+          <img src={Home_Kitchen} alt="" />
         </li>
       </ul>
     </div>
   );
-}
+};
 
-export default NavBar2
+export default NavBar2;

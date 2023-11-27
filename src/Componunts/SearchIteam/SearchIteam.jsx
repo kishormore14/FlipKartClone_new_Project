@@ -34,7 +34,7 @@ const dispatch = useDispatch();
     }
   };
   return (
-    <div>
+    <div> 
       <Nav />
       <div className="search_product row">
         <div className="col-md-3">

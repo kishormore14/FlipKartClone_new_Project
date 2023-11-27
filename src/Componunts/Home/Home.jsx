@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Bokdatasevice from "../../services/Operations";
-import {
+import {SearchProduct,
   setProduct,
   Wishlist_PRODUCT,
 } from "../../redux/Actions/ProductActons";
@@ -13,6 +13,7 @@ import Slider2 from "./Images/slider2.webp";
 import Slider3 from "./Images/slider3.webp";
 import Slider4 from "./Images/slider4.webp";
 import Swal from "sweetalert2";
+import NavBar2 from "../NavBar_2/NavBar2";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
@@ -86,8 +87,12 @@ const Home = () => {
  
   return (
     <div>
-      <Nav />
-
+      <div class="nav-container">
+        <Nav />
+      </div>
+      <div class="navbar2-container">
+        <NavBar2 />
+      </div>
       <div>
         <Carousel
           showArrows={true}
@@ -140,6 +145,10 @@ const Home = () => {
                   />
                 </svg>
                 <img
+                onClick={()=>{
+                  dispatch(SearchProduct(product))
+                   navigate("/SearchIteam");
+                }}
                   src={product.base64Image}
                   alt={product.name}
                   class="card-img-top "
@@ -213,6 +222,10 @@ const Home = () => {
                   />
                 </svg>
                 <img
+                onClick={()=>{
+                  dispatch(SearchProduct(product))
+                   navigate("/SearchIteam");
+                }}
                   src={product.base64Image}
                   alt={product.name}
                   class="card-img-top "
@@ -286,6 +299,10 @@ const Home = () => {
                   />
                 </svg>
                 <img
+                onClick={()=>{
+                  dispatch(SearchProduct(product))
+                   navigate("/SearchIteam");
+                }}
                   src={product.base64Image}
                   alt={product.name}
                   class="card-img-top "
@@ -358,6 +375,10 @@ const Home = () => {
                   />
                 </svg>
                 <img
+                onClick={()=>{
+                  dispatch(SearchProduct(product))
+                   navigate("/SearchIteam");
+                }}
                   src={product.base64Image}
                   alt={product.name}
                   class="card-img-top "

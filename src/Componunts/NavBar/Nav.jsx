@@ -82,7 +82,7 @@ const Nav = () => {
     );
     if (user_log) {
       dispatch(SetUser(user_log));
-      alert("welcome");
+      alert("welcome");   
         navigate("/");
     } else {
       alert("Unknown User");

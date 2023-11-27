@@ -146,6 +146,5 @@ cursor: pointer;
 .Nav_container{
     background-color: rgb(40, 116, 240);
     width: 100%;
-    z-index: 4;
-    position: fixed;
+   
 }

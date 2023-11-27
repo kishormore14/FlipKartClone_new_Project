@@ -7,5 +7,5 @@ export const ActionsTypes = {
 
   Wishlist_PRODUCT: "Wishlist_PRODUCT",
 
-}
+} 
 

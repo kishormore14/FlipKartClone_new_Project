@@ -1,3 +1,16 @@
+.nav-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 100; /* Adjust the z-index to control the stacking order */
+  /* Add any other styles as needed */
+}
+.navbar2-container{
+    margin-top: 83px !important;
+}
+
 .card{
     width: 15rem;
     margin-left: 2rem;
@@ -10,7 +23,7 @@
 
 .carousel .slider-wrapper {
     overflow: hidden;
-    margin-top: 83px !important;
+   
     width: 100%;
     transition: height .15s ease-in;
 }
